@@ -1,55 +1,44 @@
 # Heart Disease Prediction
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.24-orange?logo=scikitlearn) ![Pandas](https://img.shields.io/badge/Pandas-1.5-green?logo=pandas) ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7-red?logo=matplotlib)
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Features](#features)
-- [Model](#model)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results](#results)
-- [Future Improvements](#future-improvements)
-- [Author](#author)
-
 ## Project Overview
-Heart disease is one of the leading causes of death worldwide. Early prediction can save lives by alerting patients and doctors in time.  
-This project uses machine learning models to predict the likelihood of heart disease based on various medical attributes.
+This project implements a **Heart Disease Prediction system** using machine learning. It predicts whether a patient has heart disease based on key medical features such as age, cholesterol, blood pressure, chest pain type, and more. The model is trained using a **Random Forest Classifier** for reliable and accurate predictions.
 
 ## Dataset
-The project uses the [Heart Disease UCI Dataset](https://www.kaggle.com/datasets/johnsmith88/heart-disease-uci) from Kaggle.  
-It contains **303 records** and **14 features** related to patient health indicators.
+- **File:** `heart.csv`
+- **Features:** Age, Sex, Chest Pain Type, Resting Blood Pressure, Cholesterol, Fasting Blood Sugar, Rest ECG Results, Max Heart Rate, Exercise-Induced Angina, ST Depression, Slope of ST, Number of Major Vessels, Thalassemia
+- **Target:** `condition` (converted to binary: 0 = No Disease, 1 = Disease)
 
-## Features
-| Feature | Description |
-|---------|-------------|
-| age | Age of the patient |
-| sex | Gender (1 = male, 0 = female) |
-| cp | Chest pain type (4 values) |
-| trestbps | Resting blood pressure (in mm Hg) |
-| chol | Serum cholesterol in mg/dl |
-| fbs | Fasting blood sugar > 120 mg/dl (1 = true; 0 = false) |
-| restecg | Resting electrocardiographic results |
-| thalach | Maximum heart rate achieved |
-| exang | Exercise-induced angina (1 = yes; 0 = no) |
-| oldpeak | ST depression induced by exercise relative to rest |
-| slope | Slope of the peak exercise ST segment |
-| ca | Number of major vessels colored by fluoroscopy |
-| thal | Thalassemia (3 = normal; 6 = fixed defect; 7 = reversible defect) |
-| target | Diagnosis of heart disease (1 = yes; 0 = no) |
+## Project Workflow
+1. **Data Loading & Cleaning**  
+   Load the dataset and preprocess the target column for binary classification.
+2. **Exploratory Data Analysis (EDA)**  
+   Visualize data distribution and feature correlations using count plots and heatmaps.
+3. **Feature Scaling**  
+   Standardize features to improve model performance.
+4. **Model Training**  
+   Train a Random Forest Classifier on the training dataset.
+5. **Evaluation**  
+   Assess model performance using accuracy, confusion matrix, and classification report.
+6. **Feature Importance**  
+   Identify and visualize the top features contributing to predictions.
 
-## Model
-This project explores multiple machine learning algorithms including:
-- Logistic Regression
-- Random Forest Classifier
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Gradient Boosting Classifier
+## Key Libraries
+- `pandas` & `numpy` – Data handling and manipulation  
+- `matplotlib` & `seaborn` – Data visualization  
+- `scikit-learn` – Machine learning, preprocessing, and evaluation  
 
-The **best-performing model** is used for final predictions.  
+## Results
+- ✅ **Model Accuracy:** ~[Insert your test accuracy]%  
+- ✅ **Confusion Matrix:** Shows true vs predicted labels  
+- ✅ **Classification Report:** Precision, Recall, F1-score for both classes  
 
-## Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/Heart-Disease-Prediction.git
+## Visualizations
+- Distribution of heart disease cases  
+- Feature correlation heatmap  
+- Confusion matrix heatmap  
+- Top 10 important features influencing predictions  
+
+## How to Run
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/your-username/Heart-Disease-Prediction.git
